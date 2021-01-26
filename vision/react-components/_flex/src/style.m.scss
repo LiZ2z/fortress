@@ -1,0 +1,80 @@
+.flex {
+  display: flex;
+}
+
+/* flex-direction */
+.flex-direction-column {
+  flex-direction: column;
+}
+
+/* justify-content */
+@each $justify in center, space-between, space-around, flex-start, flex-end {
+  .flex-justify-#{$justify} {
+    justify-content: $justify;
+  }
+}
+
+/* align-items */
+@each $justify in center, space-between, space-around, flex-start, flex-end {
+  .flex-align-#{$justify} {
+    align-items: $justify;
+  }
+}
+
+
+/* ***************************************************************
+flex
+
+flex标准:
+  flex: initial; === flex: 0 1 auto;
+  flex: 0; === flex: 0 1 0%;
+  flex: 1; === flex: 1 1 0%;
+  flex: none; === flex: 0 0 auto;
+  flex: auto; === flex: 1 1 auto;
+
+flex item的宽度优先以flex-basis为准，当flex-basis的值为 auto时，则使用
+width属性的值，如果flex-basis及width都没有值，则以flex item的内容宽度
+为准，即：
+
+flex-basis > width > content width
+
+也就是说当flex：1; 时，flex-basis的值为 0%，所以此时设置width属性没有效果，
+但是我们希望width始终有效果，所以需要修改。
+
+另外，因为flex: 1; 的效果与flex: auto;类似，我们没必要重复定义，所以将其改为
+ flex-1  ===  flex: 1 0 auto; // 不允许缩小，允许放大
+
+不完全遵守标准，具体实现如下：
+ flex-1  ===  flex: 1 0 auto; // 不允许缩小，允许放大
+ flex-0  ===  flex: 0 1 auto; // 允许缩小，不允许放大
+ flex-auto ===  flex: 1 1 auto; // 允许缩小，允许放大
+ flex-none ===  flex: 0 0 auto; // 不允许缩小，不允许放大
+*************************************************************** */
+.flex-auto {
+  flex: auto;
+}
+.flex-none {
+  flex: none;
+}
+.flex-1 {
+  flex: 1 0 auto;
+}
+.flex-0 {
+  flex: 0 1 auto;
+}
+
+/* 解决子元素尺寸过大撑开父元素问题 */
+.flex-direction-column {
+  & > .flex-auto,
+  & > .flex-1 {
+    overflow: auto;
+    height: 0;
+  }
+}
+.flex-direction-row {
+  & > .flex-auto,
+  & > .flex-1 {
+    overflow: auto;
+    width: 0;
+  }
+}

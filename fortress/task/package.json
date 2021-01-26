@@ -1,0 +1,13 @@
+{
+    "name": "@flamma/task",
+    "version": "0.1.0",
+    "description": "A Nodejs library that allows you to create tasks in your code",
+    "keywords": [],
+    "author": "liz2Z <fitz-i@foxmail.com>",
+    "license": "MIT",
+    "scripts": {},
+    "main": "lib/index.js",
+    "engines": {
+        "node": ">10.0"
+    }
+}

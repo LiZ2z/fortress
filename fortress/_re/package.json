@@ -1,0 +1,6 @@
+{
+  "name": "buitin_re",
+  "dependencies": {
+    "fs-extra": "^9.0.1"
+  }
+}

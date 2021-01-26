@@ -1,0 +1,19 @@
+{
+  "name": "@flamma/icons",
+  "version": "0.1.0",
+  "keywords": [
+    "icon",
+    "icons",
+    "svg",
+    "react",
+    "components"
+  ],
+  "scripts": {
+    "start": "rm -rf dest && yarn icont"
+  },
+  "author": "liz2Z<fitz-i@foxmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@flamma/icont": "workspace:*"
+  }
+}
