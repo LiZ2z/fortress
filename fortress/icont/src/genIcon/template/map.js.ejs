@@ -1,0 +1,13 @@
+// prettier-ignore
+/* eslint-disable */
+// @ts-nocheck
+
+<%filenames.forEach((filename)=>{ %>
+import <%=filename%> from '<%-`./${dir}/${filename}`%>';
+<% });%>
+
+export default {
+<%filenames.forEach((filename)=>{ %>
+  '<%= this.hyphenate(filename) %>': <%= filename %>,  
+<% });%>
+};

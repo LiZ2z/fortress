@@ -18,7 +18,7 @@ const Sticky: React.FC<React.PropsWithChildren<IStickyProps>> = ({ children, cla
   }, [emit, children]);
 
   return (
-    <div ref={ref} className={className} style={style}>
+    <div ref={ref} className={className} style={style} dangerouslySetInnerHTML={}>
       {children}
     </div>
   );

@@ -1,0 +1,24 @@
+/* eslint-disable */
+// prettier-ignore
+// @ts-nocheck
+import React from 'react';
+import useIcons from './useIcons';
+import './style.css';
+
+const Icon = ({ className, type, ...rest }, ref) => {
+  const iconXML = useIcons(type);
+  const _classname = `<%= prefix %>-icon <%= prefix %>-icon-${type} ${className||''}`;
+
+  if (!iconXML) {
+    if (process.env.NODE_ENV === 'development') {
+      throw Error(`没有找到Icon：${type}`);
+    }
+    return null;
+  }
+
+  return (
+    <i {...rest} ref={ref} className={_classname} dangerouslySetInnerHTML={{__html: iconXML}} />
+  );
+};
+
+export default React.forwardRef(Icon);

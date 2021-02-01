@@ -48,9 +48,13 @@ export default class FileReader extends Readable {
     }
 
     if (filehandle) {
-      filehandle.close();
+      try {
+        await filehandle.close();
+      } catch (error) {
+        //
+      }
     }
   }
 
-  _destroy(error: null | Error, callback?: any): void {}
+  // _destroy(error: null | Error, callback?: any): void {}
 }

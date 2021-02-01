@@ -106,6 +106,10 @@ const svgo = new SVGO({
     {
       removeAttrs: { attrs: '(class)' },
     },
+    {
+      removeScriptElement: true,
+    },
+    
   ],
 });
 

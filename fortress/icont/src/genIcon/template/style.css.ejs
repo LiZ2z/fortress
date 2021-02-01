@@ -1,0 +1,31 @@
+.<%= prefix %>-icon {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  line-height: 1;
+  text-align: center;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.<%= prefix %>-icon * {
+  fill: currentColor !important;
+}
+
+
+.icont-placeholder-loading {
+  animation: icont-placeholder-loading-rotate linear 0.6s infinite;
+}
+
+@keyframes icont-placeholder-loading-rotate {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}

@@ -1,0 +1,7 @@
+// prettier-ignore
+/* eslint-disable */
+
+export type IconType = 
+<%filenames.forEach((filename,i)=>{ %>
+  | '<%=this.hyphenate(filename)%>'
+<% }); %>;
