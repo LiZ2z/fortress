@@ -11,8 +11,8 @@
   "main": "./icon_generator/index.js",
   "bin": "./bin/index.js",
   "files": [
-    "./bin/**/*",
-    "./icon_generator/**/*"
+    "bin/**/*",
+    "icon_generator/**/*"
   ],
   "author": "liz2Z<fitz-i@foxmail.com>",
   "license": "MIT",
