@@ -1,7 +1,0 @@
-{
-  "name": "@flamma/on",
-  "main": "./lib",
-  "scripts": {
-    "build": "yarn build:compile \"$(pwd)\""
-  }
-}

@@ -1,0 +1,7 @@
+{
+  "name": "@flamma/event_emiter",
+  "main": "./lib",
+  "scripts": {
+    "build": "yarn build:compile \"$(pwd)\""
+  }
+}

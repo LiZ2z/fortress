@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  src: path.resolve(__dirname, 'src/**/*'),
+  src: path.resolve(__dirname, 'svgs/**/*'),
   dest: path.resolve(__dirname, 'dest'),
-  target: 'react',
+  prefix: 'xxx',
 };

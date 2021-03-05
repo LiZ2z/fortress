@@ -12,6 +12,7 @@ module.exports = {
   env: {
     node: true,
     es6: true,
+    browser: true,
   },
   // eslint-plugin-import for yarn pnp
   // https://www.npmjs.com/package/eslint-import-resolver-node

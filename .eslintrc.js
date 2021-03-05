@@ -65,5 +65,6 @@ module.exports = {
         'ts-check': 'allow-with-description',
       },
     ],
+    'react/jsx-filename-extension': ['error', { extensions: ['.tsx', '.jsx'] }],
   },
 };

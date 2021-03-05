@@ -1,0 +1,13 @@
+#root {
+  color: red;
+}
+
+.wrap {
+  border-top: 1px solid #adff2f;
+  font-size: 50px;
+}
+
+i {
+  margin-left: 16px;
+  background: #ccc;
+}

@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+*:focus {
+  outline: 2px solid #38f;
+}
+
+.grid {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  padding: 20px 0;
+}
+
+.operation-area {
+  position: relative;
+  z-index: 10;
+  flex: none;
+  height: 100px;
+  width: 100px;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+}
+
+.icon {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.icon-name {
+  white-space: nowrap;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.outter-circle {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed #38f;
+  border-radius: 50%;
+}
+
+.inner-circle {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed #38f;
+  border-radius: 50%;
+}
+
+.operation-btns {
+  position: absolute;
+  top: 100%;
+}
+
+.operation-btns button {
+  border: none;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.operation-sign {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  border: 1px dashed #38f;
+  border-radius: 3px;
+  cursor: move;
+}
+
+.operation-anchor {
+  position: absolute;
+  right: -8px;
+  bottom: -8px;
+  width: 16px;
+  height: 16px;
+  background: #75aeff;
+  border: 2px solid #38f;
+  border-radius: 50%;
+  cursor: nwse-resize;
+}

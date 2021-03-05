@@ -1,0 +1,39 @@
+{
+  "name": "@flamma/this_is_life",
+  "version": "0.1.0",
+  "scripts": {
+    "tsc": "yarn g:tsc",
+    "dev": "NODE_ENV=development yarn webpack-dev-server --config ./webpack.config.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "autoprefixer": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "cache-loader": "^4.1.0",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "fork-ts-checker-webpack-plugin": "^6.0.6",
+    "html-webpack-plugin": "^4.5.0",
+    "less": "^4.0.0",
+    "less-loader": "^7.2.0",
+    "postcss-loader": "^4.1.0",
+    "react-refresh": "^0.9.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.32.1",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "d3": "^6.5.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}

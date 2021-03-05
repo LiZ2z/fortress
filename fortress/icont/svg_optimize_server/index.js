@@ -1,14 +1,17 @@
 const Koa = require('koa');
-const Router = require('@koa/router');
+const router = require('./routes');
+const useCORS = require('./middleware/useCORS');
+const useBodyParser = require('./middleware/useBodyParser');
+const useResponse = require('./middleware/useResponse');
 
 const app = new Koa();
-const router = new Router();
 
-router.get('/', (ctx, next) => {
-  ctx.body = 'Hello World!';
-});
-
-app.use(router.routes()).use(router.allowedMethods());
+app
+  .use(useCORS())
+  .use(useBodyParser())
+  .use(useResponse())
+  .use(router.routes())
+  .use(router.allowedMethods());
 
 app.listen(3000, (error) => {
   if (error) {
